@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8</title>
+</head>
+<body>
+<button id="startt" class="btn">Hard??</button>
+<button id="start" class="btn">Music</button>
+<p style="color:gold"; class="p">Rule 1:Look for clues</p>
+<p style="color:gold"; class="p">Rule 2:No inspect</p>
+<p style="color:gold"; class="p">Rule 3:Tink and chose</p>
+<div id="one">
+    <img src="./card.jpg">
+</div>
+<p style="color:black";>Colour of the rainbow</p>
+<div id="two">
+    <img src="./card.jpg">
+</div>
+
+<div id="three">
+    <img src="./card.jpg">
+</div>
+
+<div id="four">
+    <img src="./card.jpg">
+</div> 
+<p style="color:black";>Days of the week</p>
+<div id="five">
+    <img src="./card.jpg">
+</div>
+
+<div id="six">
+    <img src="./card.jpg">
+</div>
+
+<div id="sev">
+    <img src="./card.jpg">
+</div>
+
+<div id="et">
+    <img src="./card.jpg">
+</div>
+</body>
+</html>
+<style>
+body{
+background-color: black;
+}
+img {
+    float: left;
+    width:200px;
+    height:200px;
+    object-fit: cover;
+ padding-left:80px;
+padding-right:80px;
+  margin-top:30px;
+ margin-bottom:30px
+}
+.btn{
+    background-color: aqua;
+    text-align: center;
+    font-family: cooper black;
+}
+.p{
+    font-style: italic;
+    text-decoration: dotted;
+}
+</style>
+<script>
+//button
+const $starttttButton = document.getElementById("start");
+$starttttButton.onclick=()=>{
+    const controller = new AudioController()
+controller.bgMusic.play()
+}
+//btn2
+const $startButton = document.getElementById("startt");
+$startButton.onclick=()=>{
+location.herf="./indexone.html"
+}
+class AudioController {
+    constructor() {
+        this.bgMusic = new Audio('https://raw.githubusercontent.com/WebDevSimplified/Mix-Or-Match/master/Assets/Audio/creepy.mp3');
+    }
+}
+//No right click menu and no f12 & 1 more
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);
+
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            return false;
+        }
+    }
+
+    document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 44) {
+            return false;
+        }
+    }
+    //1
+var one=document.getElementById("one");
+one.onclick=()=>{
+    location.href="danger.html"
+    }
+//2
+var two=document.getElementById("two");
+two.onclick=()=>{
+    location.href="danger.html"
+    }
+//3
+var three=document.getElementById("three");
+three.onclick=()=>{
+    location.href="danger.html"
+    }
+//4
+var four=document.getElementById("four");
+four.onclick=()=>{
+    location.href="danger.html"
+    }
+//5
+var five=document.getElementById("five");
+five.onclick=()=>{
+    location.href="danger.html"
+    }
+//6
+var six=document.getElementById("six");
+six.onclick=()=>{
+    location.href="danger.html"
+    }
+//7
+var sev=document.getElementById("sev");
+sev.onclick=()=>{
+    location.href="win.html"
+    }
+//8
+var et=document.getElementById("et");
+et.onclick=()=>{
+    location.href="danger.html"
+    }
+</script>
